@@ -25,25 +25,34 @@ const DesignPage = () => {
   return (
     <div className="container">
       {/* Navbar */}
+      
       <nav className="navbar">
-        <h1 className="logo">DCONTOUR LITETECH</h1>
-        <input type="file" accept=".igs,.iges" onChange={handleFileUpload} className="file-input" />
+      <button className="back-button" >Back
+              <i className="fas fa-arrow-left"></i> 
+            </button>
+        <h1 className="logo">
+            <img/>
+            DCONTOUR LITETECH</h1>
+
+
         {file && (
           <div className="file-info">
             <span>{file.name}</span>
             <span>({(file.size / 1024).toFixed(2)} KB)</span>
           </div>
+          
         )}
+        <button className="logout-button">Logout</button>
       </nav>
 
       <div className="content">
         {/* Left Panel */}
         <div className="left-panel">
           <div className="header">
-            <button className="back-button">
+            {/* <button className="back-button">back
               <i className="fas fa-arrow-left"></i> 
-            </button>
-            <button className="logout-button"></button>
+            </button> */}
+            {/* <button className="logout-button">logout</button> */}
           </div>
           
         <h1>Design Parameters</h1>
@@ -52,12 +61,15 @@ const DesignPage = () => {
             {/* X Position */}
             <div className="input-group">
               <h4>source posiion</h4>
+              <div className="input-h2">
+              <h2>X</h2>
+              <h2>Y</h2>
+              <h2>Z</h2>
+              </div>
+              
               <div className="input-row">
-                <h2>X</h2>
                 <input type="text" value="0" />
-                <h2>Y</h2>
-                <input type="text" value="0" />
-                <h2>Z</h2>
+                <input type="text" value="0" /> 
                 <input type="text" value="0" />
               </div>
             </div>
@@ -65,6 +77,11 @@ const DesignPage = () => {
             {/* Optical Direction */}
             <div className="input-group">
               <h2>Optical Direction</h2>
+              <div className="input-h2">
+              <h2>X</h2>
+              <h2>Y</h2>
+              <h2>Z</h2>
+              </div>
               <div className="input-row">
                 <input type="text" value="1" />
                 <input type="text" value="0" />
@@ -75,6 +92,11 @@ const DesignPage = () => {
             {/* Orientation */}
             <div className="input-group">
               <h2>Orientation</h2>
+              <div className="input-h2">
+              <h2>X</h2>
+              <h2>Y</h2>
+              <h2>Z</h2>
+              </div>
               <div className="input-row">
                 <input type="text" value="0" />
                 <input type="text" value="1" />
@@ -109,12 +131,29 @@ const DesignPage = () => {
         </div>
 
         {/* Right Panel */}
+
+        
         <div className="right-panel">
-          <img
-            src="https://storage.googleapis.com/a1aa/image/m86FJ2Uf-mrfwXSdtQcsBJBLhDVm3ikv-cBvb402tnM.jpg"
-            alt="Design preview"
-          />
+            <nav className=" dd">
+                <h3 className="h3">3D Preview</h3>
+            <button className="export">Wireframe</button>
+
+    <div className="button-o">
+    <select className="option-design ">option
+    <option><input type="file" accept=".igs" onChange={handleFileUpload} className="file-input" />.igs</option>
+    <option><input type="file" accept=".iges" onChange={handleFileUpload} className="file-input" />.iges</option>
+
+    </select>
+    <button className="export">Export</button>
+    </div>
+     
+     
+            </nav>
+            <div className="img">
+                <img></img>
+            </div>
         </div>
+        
       </div>
     </div>
   );

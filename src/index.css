@@ -2,7 +2,7 @@
 body {
   margin: 0;
   font-family: Arial, sans-serif;
-  background-color: #1a202c;
+  background-color: #0b0f19;
   color: white;
 }
 
@@ -12,12 +12,18 @@ body {
   align-items: center;
   justify-content: space-between;
   padding: 15px 20px;
-  background: #2d3748;
+  background: #0b0f19;
+}
+.back-button{
+  background-color: #8491ac;
+  padding-left: 250px;
+  position: static;
 }
 
 .logo {
   font-size: 20px;
   font-weight: bold;
+  padding-right: 800px;
 }
 
 .file-input {
@@ -51,7 +57,7 @@ body {
 .left-panel {
   width: 100%;
   padding: 20px;
-  background-color: #1a202c;
+  background-color: #0b0f19;
 }
 
 @media (min-width: 768px) {
@@ -77,10 +83,16 @@ body {
 }
 
 /* Input Sections */
+
 .input-group h2 {
   font-size: 16px;
   font-weight: bold;
   margin-bottom: 8px;
+}
+
+.input-h2 {
+  display: flex;
+  gap: 240px;
 }
 
 .input-row {
@@ -156,9 +168,64 @@ body {
 
 
 /* Right Panel */
+.dd{
+  padding-bottom: 610px;
+  display: flex;
+  gap: 20px;
+  position: absolute;
+   /* position: sticky; */
+}
+.h3{
+  margin-right: 250px;
+}
+.button-o{
+  display: flex;
+  gap: 13px;
+  /* margin-left: 350px; */
+}
+
+.option-design{
+  background-color: #1a1a1d; /* bg-gray-800 */
+  color: #d1d5db; /* text-gray-300 */
+  border: 1px solid #1a1a1d; /* border-gray-700 */
+  border-radius: 8px; /* rounded-lg */
+  padding: 8px 12px; /* px-3 py-2 */
+  width: 110%; 
+  font-size: 14px;
+}
+@media (min-width: 768px) {
+  .input-field {
+    width: auto; /* md:w-auto */
+    font-size: 16px; /* md:text-base */
+  }
+}
+
+.export{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px; /* space-x-2 */
+  padding: 8px 12px; /* px-3 py-2 */
+  border-radius: 8px; /* rounded-lg */
+  /* width: 100%; w-full */
+  font-size: 12px; /* text-sm */
+  background-color: #080808; /* bg-gray-700 */
+  color: #837a7a; /* text-gray-400 */
+  cursor: not-allowed; /* cursor-not-allowed */
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+@media (min-width: 768px) {
+  .button-disabled {
+    width: auto; /* md:w-auto */
+    font-size: 16px; /* md:text-base */
+  }
+}
+
+
 .right-panel {
   width: 100%;
-  background-color: #2563eb;
+  background-color: #101523;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -174,4 +241,11 @@ body {
   border-radius: 10px;
   max-width: 90%;
   max-height: 90%;
+}
+
+.img{
+  width: 650px;
+  height: 530px;
+  background-color: #20283e;
+  align-items: center;
 }
